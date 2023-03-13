@@ -34,17 +34,19 @@ ul li:has(ul) {
   .container {
     max-width: 720px;
   }
+  h1 > span {
+    padding: 0.5rem;
+  }
   section {
     margin-top: 2rem;
     line-height: 1.5;
-    h2{
-      font-size: 1rem;
-    }
+   
     h3 {
       color: #b9b9b9;
     }
     h4 {
       color: #ed8936;
     }
+  
   }
 }

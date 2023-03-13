@@ -1,6 +1,8 @@
+<app-modal *ngIf="generalService.showDialog"></app-modal>
 <div class="education">
   <div class="container">
-    <h2>Experiência</h2>
+
+    <h1 class="material-icon">Experiência<span class="material-symbols-outlined">work</span></h1>
     <ul>
       <li *ngFor="let workexp of experienceList">
         <h2>{{workexp.role}}</h2>
@@ -11,7 +13,7 @@
         </ul>
       </li>
     </ul>
-    <h2>Formação</h2>
+    <h1 class="material-icon">Formação<span class="material-symbols-outlined">school</span></h1>
     <section *ngFor="let education of educationList">
       <h2>{{education.institution}}</h2>
       <h3>{{education.course}}</h3>

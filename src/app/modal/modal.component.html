@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="header">
+    <img
+      decoding="async"
+      width="150"
+      height="165"
+      src="https://www.enacom.com.br/wp-content/uploads/2021/01/Logo_Enacom.svg"
+      class="attachment-large size-large wp-image-5014"
+      alt="Logo ENACOM"
+      loading="lazy"
+    />
+  </div>
+  <div class="content">
+    <p>
+      <strong>Assunto:</strong> {{ generalService.emailData?.subject_matter }}
+    </p>
+    <p><strong>Comentário:</strong> {{ generalService.emailData.comment }}</p>
+    <p><strong>Contato:</strong></p>
+    <ul>
+      <li>
+        <strong>Nome:</strong> {{ generalService.emailData?.contact?.name }}
+      </li>
+      <li>
+        <strong>Telefone:</strong> {{ generalService.emailData?.contact?.tel }}
+      </li>
+      <li>
+        <strong>Email:</strong> {{ generalService.emailData?.contact?.email }}
+      </li>
+    </ul>
+  </div>
+  <div class="actions">
+    <button class="cancel" (click)="generalService.showDialog = false">
+      Fechar
+    </button>
+  </div>
+</div>

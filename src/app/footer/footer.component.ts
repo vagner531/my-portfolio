@@ -1,3 +1,4 @@
+import { GeneralService } from './../services/general.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(public generalService: GeneralService) {}
 
   ngOnInit(): void {
   }

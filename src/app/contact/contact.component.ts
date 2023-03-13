@@ -1,3 +1,4 @@
+import { GeneralService } from './../services/general.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(public generalService: GeneralService) {}
 
   ngOnInit(): void {
   }

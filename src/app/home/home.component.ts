@@ -1,4 +1,4 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { GeneralService } from './../services/general.service';
 import { Component, HostBinding, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   @HostBinding('class.pc') pcMode = false;
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(public generalService: GeneralService) {}
 
   ngOnInit(): void {
     

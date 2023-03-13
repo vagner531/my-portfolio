@@ -1,3 +1,4 @@
+import { GeneralService } from './../services/general.service';
 import { Skill } from './../model';
 import { Component, OnInit } from '@angular/core';
 
@@ -54,7 +55,7 @@ export class SkillsComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(public generalService: GeneralService) {}
 
   ngOnInit(): void {
   }

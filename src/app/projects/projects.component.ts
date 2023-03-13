@@ -1,3 +1,4 @@
+import { GeneralService } from './../services/general.service';
 import { ProjectData } from './../model';
 import { Component, OnInit } from '@angular/core';
 
@@ -43,11 +44,7 @@ export class ProjectsComponent implements OnInit {
     
   ];
 
-  // toggleOpen() {
-  //   this.isOpen = !this.isOpen;
-  // }
-
-  constructor() {}
+  constructor(public generalService: GeneralService) {}
 
   ngOnInit(): void {}
 }

@@ -6,7 +6,6 @@ $menuBreakpoint: 844px;
   width: 100%;
   position: fixed;
   background-color: rgb(32, 32, 36);
-  position: fixed;
   .navbar_container {
     display: flex;
     justify-content: space-evenly;
@@ -17,7 +16,6 @@ $menuBreakpoint: 844px;
     align-items: center;
     text-decoration: none;
     list-style: none;
-  
   }
 
   .logotype {
@@ -44,9 +42,10 @@ $menuBreakpoint: 844px;
 
     @media (max-width: $menuBreakpoint) {
       display: block;
-
+      .navbar_container {
+        display: flow-root;
+      }
     }
-
   }
 
   .menu {
@@ -55,11 +54,9 @@ $menuBreakpoint: 844px;
 
     @media (max-width: $menuBreakpoint) {
       display: none;
-
       .navbar_container {
-        display: none;
+        display: flow-root;
       }
-
       &.is-open {
         display: block;
         position: absolute;

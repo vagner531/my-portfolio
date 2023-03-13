@@ -1,3 +1,4 @@
+import { GeneralService } from './../services/general.service';
 import { Experience, Education } from './../model';
 import { Component, OnInit } from '@angular/core';
 
@@ -39,7 +40,7 @@ export class AboutComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(public generalService: GeneralService) {}
 
   ngOnInit(): void {}
 }
