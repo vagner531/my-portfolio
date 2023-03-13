@@ -1,0 +1,43 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 800px;
+}
+.card_container {
+  @include center;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  .card{
+    // position: relative;
+    padding: 1.3rem;
+    height: 160px;
+    width: 350px;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    border: 5px solid rgba(255, 255, 255, 0.16);
+    overflow: hidden;
+    box-shadow: 0 14px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22),
+    inset 0 5px 10px rgba(0, 0, 0, 0.25),
+    inset 0 5px 10px rgba(0, 0, 0, 0.22),
+  }
+  // .icon_card {
+  //   font-size: 4rem;
+
+  // }
+  .content_card {
+    text-align: left;
+    h4{
+      font-size: 1.2rem;
+      color: #ed8936;
+    }
+    p{
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+}

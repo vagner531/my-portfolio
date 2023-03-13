@@ -1,0 +1,21 @@
+<div class="education">
+  <div class="container">
+    <h2>Experiência</h2>
+    <ul>
+      <li *ngFor="let workexp of experienceList">
+        <h2>{{workexp.role}}</h2>
+        <h3>{{workexp.company}}</h3>
+        <h4>{{workexp.duration}}</h4>
+        <ul>
+          <li *ngFor="let desc of workexp.description">{{desc}}</li>
+        </ul>
+      </li>
+    </ul>
+    <h2>Formação</h2>
+    <section *ngFor="let education of educationList">
+      <h2>{{education.institution}}</h2>
+      <h3>{{education.course}}</h3>
+      <h4>{{education.duration}}</h4>
+    </section>
+  </div> 
+</div>
