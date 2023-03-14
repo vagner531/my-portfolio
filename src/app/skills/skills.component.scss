@@ -2,16 +2,16 @@
   display: block;
   padding: 4rem 2rem;
   color: #fff;
-
+  background-color: #121214;
 }
 
 .skill {
   display: flex;
   justify-content: center;
   padding-top: 3rem;
-  // .container {
-  //   max-width: 800px;
-  // }
+  .container {
+    max-width: 800px;
+  }
   section h2 {
     color: #ed8936;
     font-family: 'Poppins', sans-serif;

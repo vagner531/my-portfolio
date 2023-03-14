@@ -4,6 +4,7 @@
   color: #fff;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  background-color: #121214;
 }
 ul:has(ul) {
   padding: 0%;
@@ -30,7 +31,7 @@ ul li:has(ul) {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 7rem;
+  padding-top: 5rem;
   .container {
     max-width: 720px;
   }

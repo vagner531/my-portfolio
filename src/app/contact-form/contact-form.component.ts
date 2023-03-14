@@ -1,5 +1,5 @@
 import { GeneralService } from './../services/general.service';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
 })
-export class ContactFormComponent {
+export class ContactFormComponent implements OnDestroy, OnChanges {
   @Output() finishContact: EventEmitter<any> = new EventEmitter();
 
   form = this.fb.group({
@@ -21,6 +21,7 @@ export class ContactFormComponent {
     private fb: FormBuilder,
     private http: HttpClient,
     public generalService: GeneralService
+
   ) {}
 
   onSubmit(): void {
@@ -48,6 +49,7 @@ export class ContactFormComponent {
           console.log(response);
           alert('E-mail enviado com sucesso!');
           this.finishContact.emit();
+          this.form.reset();
         },
         (error) => {
           console.error(error);
@@ -55,5 +57,15 @@ export class ContactFormComponent {
         }
       );
 
+  }
+
+  ngOnDestroy(): void {
+    this.form.reset();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['finishContact'] && !changes['finishContact'].firstChange) {
+      this.form.reset();
+    }
   }
 }

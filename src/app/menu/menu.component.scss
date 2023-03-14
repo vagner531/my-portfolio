@@ -1,26 +1,28 @@
 $menuHeight: 60px;
 $menuBreakpoint: 768px;
-$menuBreakpoint: 844px;
 
 .my-first {
   width: 100%;
   position: fixed;
   background-color: rgb(32, 32, 36);
+  z-index: 10;
   .navbar_container {
     display: flex;
     justify-content: space-evenly;
   }
+  
   ul {
     margin: 0;
     display: flex;
     align-items: center;
+    justify-content: end;
     text-decoration: none;
     list-style: none;
   }
 
   .logotype {
     a {
-      padding-right: 6rem;
+      padding-right: 1rem;
       font-size: 3rem;
       font-weight: 900;
       font-style: italic;
@@ -42,11 +44,9 @@ $menuBreakpoint: 844px;
 
     @media (max-width: $menuBreakpoint) {
       display: block;
-      .navbar_container {
-        display: flow-root;
-      }
-    }
+  
   }
+}
 
   .menu {
     display: flex;
@@ -54,9 +54,6 @@ $menuBreakpoint: 844px;
 
     @media (max-width: $menuBreakpoint) {
       display: none;
-      .navbar_container {
-        display: flow-root;
-      }
       &.is-open {
         display: block;
         position: absolute;
@@ -69,6 +66,7 @@ $menuBreakpoint: 844px;
         }
       }
     }
+  
 
     .menu-item {
       padding: 0 10px;
@@ -83,3 +81,18 @@ $menuBreakpoint: 844px;
     }
   }
 }
+
+// @media (max-width: 844px) {
+//   .my-first .navbar_container {
+//     display: block;
+// }
+// }
+// @media (max-width: 1180px) {
+//   .my-first {
+//     display: flex;
+//     justify-content: center;
+// }
+//   .my-first .navbar_container {
+//     display: inline-flex;
+// }
+// }
