@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ResponsiveDirective } from './directives/responsive.directive';
@@ -23,6 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { ModalComponent } from './modal/modal.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+
 
 
 @NgModule({
@@ -32,12 +33,13 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     SkillsComponent,
     ProjectsComponent,
-    ContactComponent,
     HomeComponent,
     ResponsiveDirective,
     CardComponent,
     AboutComponent,
     ModalComponent,
+    ContactFormComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

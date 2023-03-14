@@ -1,5 +1,5 @@
-import { GeneralService } from './../services/general.service';
 import { Component, OnInit } from '@angular/core';
+import { GeneralService } from '../services/general.service';
 
 @Component({
   selector: 'app-modal',
@@ -7,14 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-  constructor(public generalService: GeneralService) {
-
-  }
+  constructor(public generalService: GeneralService) { }
 
   ngOnInit(): void {
     this.generalService.getEmailData().subscribe((data: any) => {
       this.generalService.emailData = data;
     });
   }
-
 }

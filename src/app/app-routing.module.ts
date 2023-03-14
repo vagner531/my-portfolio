@@ -1,9 +1,9 @@
+import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: ContactFormComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,18 @@
+<app-modal *ngIf="generalService.showDialog"></app-modal>
+<div class="form">
+  <div class="form-container">
+    <h2 [ngStyle]="{ color: '#ed8936' }">Contato</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <label>Nome</label>
+      <input formControlName="name" />
+      <label>E-mail</label>
+      <input formControlName="email" />
+      <label>Mensagem</label>
+      <textarea formControlName="message"></textarea>
+      <div class="actions">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+    <div class="contant"></div>
+  </div>
+</div>
