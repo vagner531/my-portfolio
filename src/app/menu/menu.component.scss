@@ -1,5 +1,6 @@
 $menuHeight: 60px;
 $menuBreakpoint: 768px;
+$menuBreakpoint: 844px;
 
 .my-first {
   width: 100%;
@@ -82,17 +83,9 @@ $menuBreakpoint: 768px;
   }
 }
 
-// @media (max-width: 844px) {
-//   .my-first .navbar_container {
-//     display: block;
-// }
-// }
-// @media (max-width: 1180px) {
-//   .my-first {
-//     display: flex;
-//     justify-content: center;
-// }
-//   .my-first .navbar_container {
-//     display: inline-flex;
-// }
-// }
+@media (max-width: 844px) {
+  .my-first .navbar_container {
+  display: block;
+  }
+
+}
