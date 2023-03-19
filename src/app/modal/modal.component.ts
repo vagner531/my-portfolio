@@ -1,4 +1,5 @@
-import { MatDialogModule } from '@angular/material/dialog';
+import { LiveFormComponent } from './../live-form/live-form.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 import { GeneralService } from '../services/general.service';
 
@@ -8,16 +9,21 @@ import { GeneralService } from '../services/general.service';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-  constructor(public generalService: GeneralService) { }
-  // MatDialogModule
+  constructor( 
+    public dialog: MatDialog,
+    public generalService: GeneralService
+    ) { }
+  
   ngOnInit(): void {
-    this.generalService.showDialog=true;
-    this.generalService.getEmailData().subscribe((data: any) => {
-      this.generalService.emailData = data;
-      console.log(this.generalService.emailData);
-      console.log("2 - " + data);
-      
+  } 
+
+  openDialog(): void {
+    const dialoRef =this.dialog.open(LiveFormComponent, {
+      width: '500px'
     });
+
+    dialoRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    })
   }
-   email = '@google';  
 }

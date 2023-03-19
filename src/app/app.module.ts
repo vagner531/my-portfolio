@@ -23,6 +23,7 @@ import { AboutComponent } from './about/about.component';
 import { ModalComponent } from './modal/modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { LiveFormComponent } from './live-form/live-form.component';
 
 
 
@@ -39,6 +40,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     AboutComponent,
     ModalComponent,
     ContactFormComponent,
+    LiveFormComponent,
 
   ],
   imports: [
